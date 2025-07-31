@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antica Cattedrale di San Massimo</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, blue, green, yellow, red);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            color: #000;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .image-row img {
+            max-width: 100%;
+            width: 48%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+            padding: 8px 16px;
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #fff;
+            color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .image-row img {
+                width: 100%;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .back-link {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p>
+            📖 <strong>Storia del Giubileo </strong><br>
+            Il Giubileo, o Anno Santo, è un tempo straordinario che la Chiesa Cattolica dedica al rinnovamento
+            spirituale, al perdono, alla misericordia e alla riconciliazione. Durante il Giubileo, i fedeli sono
+            invitati a compiere pellegrinaggi, a confessarsi, a ricevere l’Eucaristia e a compiere opere di carità per
+            ottenere l’indulgenza plenaria.<br><br>
+
+            📜 <strong>Origini bibliche </strong><br>
+            La parola "Giubileo" deriva dall’ebraico "yobel", che indica il corno usato per annunciare l’anno santo
+            presso gli antichi ebrei. Nel Libro del Levitico (capitolo 25), Dio stabilisce che ogni cinquantesimo anno
+            sia proclamato un Anno di Giubileo: un tempo in cui gli schiavi venivano liberati, le terre restituite, i
+            debiti cancellati, e la terra lasciata a riposo. Era un tempo di giustizia, pace e uguaglianza per tutto il
+            popolo.<br><br>
+
+            ✝️ <strong>Il Giubileo nella Chiesa </strong><br>
+            Nel cristianesimo, il primo Giubileo ufficiale fu indetto nel 1300 da Papa Bonifacio VIII, che promise
+            l’indulgenza plenaria a chiunque avesse visitato devotamente le basiliche di San Pietro e San Paolo a Roma.
+            Inizialmente previsto ogni 100 anni, il Giubileo venne successivamente celebrato ogni 50, poi ogni 33 anni
+            (in riferimento agli anni della vita di Cristo), e infine, con Papa Paolo II nel 1470, si stabilì
+            l’intervallo attuale di 25 anni.<br><br>
+
+            🕊️ <strong>Giubilei ordinari e straordinari </strong><br>
+            Esistono due tipi di Giubilei:
+
+            Giubilei ordinari: si tengono ogni 25 anni (l’ultimo è stato nel 2000, il prossimo sarà nel 2025).
+
+            Giubilei straordinari: proclamati in occasione di eventi particolari. Un esempio recente è il Giubileo
+            Straordinario della Misericordia (2015–2016) indetto da Papa Francesco, con il motto: “Misericordiosi come
+            il Padre”.<br><br>
+
+            ✨ <strong>Simboli e riti del Giubileo </strong><br>
+            Il simbolo più riconoscibile del Giubileo è la Porta Santa, presente in alcune basiliche romane, tra cui San
+            Pietro. Viene aperta all'inizio del Giubileo e rappresenta l’ingresso a una vita nuova attraverso Cristo.
+            L’indulgenza giubilare si ottiene con:<br>
+
+            - Pellegrinaggio a una Porta Santa<br>
+
+            - Confessione sacramentale<br>
+
+            - Comunione eucaristica<br>
+
+            - Preghiera secondo le intenzioni del Papa<br>
+
+            - Atto di carità o misericordia<br>
+        </p>
+
+        <a href="programma.html" class="back-link">&larr; Torna alla pagina iniziale</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mappa Itinerante</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, blue, green, yellow, red);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      margin: 0;
+      padding: 0;
+      color: #000;
+      text-align: center;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    #map {
+      height: 600px;
+      width: 100%;
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 10px;
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Itinerario con Metro e Tram – Roma</h1>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([41.885, 12.515], 13);
+
+    // Aggiungi le mappe da OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // TAPPE
+    var tappe = [
+      {
+        nome: "1. Circo Massimo (Partenza - Metro B)",
+        coord: [41.883, 12.485]
+      },
+      {
+        nome: "2. Via del Pigneto 104 (Destinazione metro)",
+        coord: [41.8898, 12.5369]
+      },
+      {
+        nome: "3. Metro Termini (3ª fermata)",
+        coord: [41.9015, 12.5011]
+      },
+      {
+        nome: "4. Tram - Fermata Termini Laziali",
+        coord: [41.9011, 12.5073]
+      },
+      {
+        nome: "5. Tram per Centocelle - Direzione Giardinetti",
+        coord: [41.9011, 12.5073]
+      },
+      {
+        nome: "6. Fermata S. Elena (4ª fermata)",
+        coord: [41.8847, 12.5486]
+      },
+      {
+        nome: "7. Alloggio (destinazione finale)",
+        coord: [41.8853, 12.5502]
+      }
+    ];
+
+    // Inserisci i marker sulla mappa
+    tappe.forEach((tappa, index) => {
+      L.marker(tappa.coord).addTo(map)
+        .bindPopup(`<b>${tappa.nome}</b>`)
+        .openPopup();
+    });
+
+    // Linea dell'itinerario
+    var linea = L.polyline(tappe.map(t => t.coord), {
+      color: 'blue',
+      weight: 4
+    }).addTo(map);
+
+    map.fitBounds(linea.getBounds());
+  </script>
+
+</body>
+</html>
